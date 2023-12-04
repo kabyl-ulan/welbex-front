@@ -1,0 +1,42 @@
+$font-color: rgba(228, 229, 234, 1);
+
+#header {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 15px;
+    padding-top: 50px;
+
+    &__nav {
+      display: flex;
+
+      .logo-link {
+        margin-right: 40px;
+        font: 300 10px/12px Montserrat, sans-serif;
+        color: $font-color;
+      }
+
+      .main-nav {
+        ul {
+          display: flex;
+          li {
+            margin-right: 30px;
+            a {
+              font: 500 16px/19px Inter, sans-serif;
+              color: $font-color;
+            }
+          }
+        }
+      }
+    }
+
+    &__contacts {
+      display: flex;
+      a {
+        font: 500 16px/19px Inter, sans-serif;
+        color: $font-color;
+        margin-left: 30px;
+      }
+    }
+  }
+}
