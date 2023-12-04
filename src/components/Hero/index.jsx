@@ -15,7 +15,8 @@ const Hero = () => {
         </div>
         <div className="hero--bonus">
           <h3>
-            Вместе с <span>бесплатной консультацией</span> мы дарим:
+            Вместе с <span>бесплатной</span> <span>консультацией</span>{" "}
+            мы дарим:
           </h3>
           <div className="bonus">
             <div className="bonus--items">
