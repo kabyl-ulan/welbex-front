@@ -6,6 +6,7 @@ import { IconTelegramSvg } from "../../assets/svg/IconTelegramSvg";
 import { IconViberSvg } from "../../assets/svg/IconViberSvg";
 import { IconWhatsappSvg } from "../../assets/svg/IconWhatsappSvg";
 import ContainerComponent from "../ui/ContainerComponent";
+import { formatPhoneNumber } from "../../config/helpers";
 
 function Footer() {
   const aboutCompany = [
@@ -66,21 +67,23 @@ function Footer() {
               <p className="contact-text">Контакты</p>
               <ul className="contact-content">
                 <li>
-                  <a href="/">{PHONE_NUMBER}</a>
+                  <a href={`tel:${PHONE_NUMBER}`}>
+                    {formatPhoneNumber(PHONE_NUMBER)}
+                  </a>
                 </li>
                 <li>
                   <span className="messenger">
-                    <a href="/">
+                    <a href="https://t.me">
                       <IconTelegramSvg />
                     </a>
                   </span>
                   <span className="messenger">
-                    <a href="/">
+                    <a href="https://www.viber.com">
                       <IconViberSvg />
                     </a>
                   </span>
                   <span className="messenger">
-                    <a href="/">
+                    <a href={`https://wa.me/${PHONE_NUMBER}`}>
                       <IconWhatsappSvg />
                     </a>
                   </span>

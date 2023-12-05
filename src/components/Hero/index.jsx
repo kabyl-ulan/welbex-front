@@ -45,6 +45,11 @@ const Hero = () => {
           </div>
         </div>
       </div>
+      <div className="redCicle"></div>
+      <div className="purpleCircle"></div>
+      <div className="ballRed"></div>
+      <div className="ballRedSmall"></div>
+      <div className="bullPurple"></div>
     </SectionComponent>
   );
 };

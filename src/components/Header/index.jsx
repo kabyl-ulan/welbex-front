@@ -7,6 +7,7 @@ import { IconViberSvg } from "../../assets/svg/IconViberSvg";
 import { IconWhatsappSvg } from "../../assets/svg/IconWhatsappSvg";
 import { PHONE_NUMBER } from "../../config/constants";
 import ContainerComponent from "../ui/ContainerComponent";
+import { formatPhoneNumber } from "../../config/helpers";
 
 function Header() {
   return (
@@ -41,18 +42,21 @@ function Header() {
             </nav>
           </div>
           <div className="header__contacts">
-            <a href="/">{PHONE_NUMBER}</a>
-            <a href="/">
+            <a href={`tel:${PHONE_NUMBER}`}>
+              {formatPhoneNumber(PHONE_NUMBER)}
+            </a>
+            <a href="https://t.me">
               <IconTelegramSvg />
             </a>
-            <a href="/">
+            <a href="https://www.viber.com">
               <IconViberSvg />
             </a>
-            <a href="/">
+            <a href={`https://wa.me/${PHONE_NUMBER}`}>
               <IconWhatsappSvg />
             </a>
           </div>
         </div>
+        <div className="bullPurple"></div>
       </ContainerComponent>
     </header>
   );
